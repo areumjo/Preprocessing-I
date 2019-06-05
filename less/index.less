@@ -73,7 +73,7 @@ table {
 
 /*  css  */
 html, body {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 
 .container {
@@ -100,10 +100,14 @@ html, body {
 			position: relative;
 			font-size: 1 rem;
 			color: black;
-		}
 
-		a:last-child {
-			margin: 0 10px 0 0;
+			&:last-child {
+				margin: 0 10px 0 0;
+			}
+
+			&:hover {
+				color: lightgray;
+			}
 		}
 	}
 
@@ -152,7 +156,7 @@ html, body {
 	}
 
 	.middle-left {
-		width: 60%;
+		width: 70%;
 		margin-right: 30px;
 		@media (max-width: 500px) {
 			width: 100%;
@@ -170,6 +174,10 @@ html, body {
 
 		tr:nth-child(even) {
 			background-color: white;
+		}
+
+		tr:first-child {
+			font-weight: none;
 		}
 	}
 }
@@ -196,24 +204,30 @@ table {
 	width: 100%;
 	border-collapse: collapse;
 
-		tr:nth-child(even) {
-			background-color: #f2f2f2;
-		}
+	tr:nth-child(even) {
+		background-color: #f2f2f2;
+	}
 
-		tr:hover {
-			background-color: #ddd;
-		}
+	tr:hover {
+		background-color: #ddd;
+	}
 
-		th {
-			padding-top: @top-padding;
-			padding-bottom: @bottom-padding;
-			text-align: left;
-			.tableStyle();
-		}
+	th {
+		padding-top: @top-padding;
+		padding-bottom: @bottom-padding;
+		text-align: left;
+		.tableStyle();
+	}
 
-		td {
-			.tableStyle();
-		}
+	td {
+		.tableStyle();
+	}
+}
+
+.bottom table {
+	tr:first-child {
+		font-weight: bold; 
+	}
 }
 
 footer {
@@ -227,7 +241,8 @@ footer {
 	border-radius: 5px;
 	border: 1px solid #ddd;
 	background-color: #f2f2f2;
-	padding: 20px;
+	margin: 30px 0;
+	padding: 30px 20px;
 
 	input[type=text], select, textarea {
 		width: 100%;

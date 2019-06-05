@@ -144,7 +144,7 @@ table {
 /*  css  */
 html,
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 .container {
   max-width: 880px;
@@ -173,6 +173,9 @@ body {
 }
 .header nav a:last-child {
   margin: 0 10px 0 0;
+}
+.header nav a:hover {
+  color: lightgray;
 }
 @media (max-width: 500px) {
   .header {
@@ -214,7 +217,7 @@ body {
   }
 }
 .middle-contents .middle-left {
-  width: 60%;
+  width: 70%;
   margin-right: 30px;
 }
 @media (max-width: 500px) {
@@ -232,6 +235,9 @@ body {
 }
 .middle-contents .middle-right table tr:nth-child(even) {
   background-color: white;
+}
+.middle-contents .middle-right table tr:first-child {
+  font-weight: none;
 }
 h3 {
   font-size: 1.5rem;
@@ -272,6 +278,9 @@ table td {
   border-bottom: 1px solid #ddd;
   padding: 10px;
 }
+.bottom table tr:first-child {
+  font-weight: bold;
+}
 footer {
   padding: 30px 0;
   margin: 0 -20px -20px -20px;
@@ -283,7 +292,8 @@ footer {
   border-radius: 5px;
   border: 1px solid #ddd;
   background-color: #f2f2f2;
-  padding: 20px;
+  margin: 30px 0;
+  padding: 30px 20px;
 }
 .contact input[type=text],
 .contact select,
