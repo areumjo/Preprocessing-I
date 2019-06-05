@@ -130,6 +130,8 @@ table {
 * {
   box-sizing: border-box;
 }
+/*  @variable */
+/*  mixin  */
 .grayBox {
   background-color: gray;
   color: white;
@@ -139,16 +141,15 @@ table {
   border-bottom: 1px solid #ddd;
   padding: 10px;
 }
+/*  css  */
 html,
 body {
-  height: 100%;
   font-family: Arial, Helvetica, sans-serif;
 }
 .container {
   max-width: 880px;
   margin: auto;
-  padding: 10px;
-  border: 1px solid red;
+  padding: 20px;
 }
 .header {
   display: flex;
@@ -156,10 +157,10 @@ body {
 }
 .header nav {
   display: flex;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .header nav a {
-  margin: 0px 50px 20px 0px;
+  margin: 0px 50px 10px 0px;
   text-decoration: none;
   position: relative;
   font-size: 1 rem;
@@ -172,16 +173,22 @@ body {
   background-color: #efefef;
   padding: 60px 40px;
 }
-img {
-  width: 35%;
-  margin: 20px 0;
+.top-contents img {
+  width: 40%;
+  margin: 10px 0;
   border: 5px solid white;
 }
-h1 {
+.top-contents h1 {
   font-size: 4em;
   text-emphasis: none;
 }
-button {
+.top-contents h3 {
+  margin-bottom: 20px;
+}
+.top-contents h5 {
+  margin: 20px 0;
+}
+.top-contents button {
   padding: 10px 50px;
   font-size: 1.25rem;
   border: 1px solid whitesmoke;
@@ -193,31 +200,48 @@ button {
   display: flex;
   justify-content: space-between;
 }
+.middle-contents .middle-left {
+  width: 60%;
+  margin-right: 30px;
+}
 .middle-contents div {
-  border: 1px solid green;
   display: flex;
   flex-wrap: wrap;
+}
+.middle-contents .middle-right table {
+  border: 1px solid #ddd;
+}
+.middle-contents .middle-right table tr:nth-child(even) {
+  background-color: white;
 }
 h3 {
   font-size: 1.5rem;
   font-style: bold;
 }
+h3,
+h5,
+p {
+  line-height: 1.5;
+}
 div {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
+  margin: 10px 0;
 }
 table {
+  padding-top: 15px;
+  padding-bottom: 15px;
   width: 100%;
   border-collapse: collapse;
 }
-table tr:nth-hover(even) {
+table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 table tr:hover {
   background-color: #ddd;
 }
 table th {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   text-align: left;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
@@ -230,6 +254,7 @@ table td {
 }
 footer {
   padding: 30px 0;
+  margin: 0 -20px -20px -20px;
   background-color: gray;
   color: white;
   text-align: center;
