@@ -54,11 +54,21 @@ table {
 }
 
 // @variable//
-@grayColor : rgb(206, 206, 210);
-
+@grayColor : gray;
+@top-padding: 10px;
+@bottom-padding: 10px;
 
 // mixin //
+.grayBox {
+	background-color: @grayColor;
+	color: white;  
+}
 
+.tableStyle {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 10px;
+}
 
 html, body {
 	height: 100%;
@@ -84,8 +94,7 @@ html, body {
 			margin: 0px 50px 20px 0px;
 			text-decoration: none;
 			position: relative;
-			top: -10px;
-			font-size: 1.25rem;
+			font-size: 1 rem;
 			color: black;
 
 		}
@@ -96,8 +105,7 @@ html, body {
 	}
 }
 
-
-.gray-box {
+.color-box {
 	background-color: #efefef;
 	padding: 60px 40px;
 }
@@ -114,28 +122,60 @@ h1 {
 }
 
 button {
-	background-color: @grayColor;
 	color: white;
 	padding: 10px 50px;
 	font-size: 1.25rem;
 	border: 1px solid whitesmoke;
 	border-radius: 6px;
+	.grayBox();
 }
 
-.bottom-contents {
+.middle-contents {
 	display: flex;
 	justify-content: space-between;
-	flex-wrap: wrap;
+
+	div {
+		border: 1px solid green;
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
 
-.bottom-contents div {
-	border: 1px solid green;
-	display: flex;
-	flex-wrap: wrap;
+h3 {
+	font-size: 1.5rem;
+	font-style: bold;
+}
+
+div {
+	padding-bottom: @bottom-padding;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+
+		tr:nth-hover(even) {
+			background-color: #f2f2f2;
+		}
+
+		tr:hover {
+			background-color: #ddd;
+		}
+
+		th {
+			padding-top: @top-padding;
+			padding-bottom: @bottom-padding;
+			text-align: left;
+			.tableStyle();
+		}
+
+		td {
+			.tableStyle();
+		}
 }
 
 footer {
-	color: white;
-	background-color: @grayColor;
+	padding: 30px 0;
+	.grayBox();
 	text-align: center;
 }
